@@ -2,28 +2,36 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<!-- <style>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</style> -->
 	
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+	body{
+		margin: 1rem;
+	}
+</style>
 <title>homework_2.2</title>
 </head>
 
 <body>
-<p>Shirley Li</p>
+<p class="lead">Shirley Li</p>
 <form id="orderOptions">
-	<input id="name" type="text" placeholder="Enter your name">
+	<div class="form-group">
+		<input class="form-control" id="name" type="text" placeholder="Enter your name"><br><br>
+	</div>
+	<div class="form-check">
+		<label for="whereEating"><input type="radio" value="Eat In" checked>Eat In</label><br>
+		<label for="whereEating"><input type="radio" value="Carry Out">Carry Out</label><br>
+		<label for="whereEating"><input type="radio" value="Delivery">Delivery</label>
+	</div>
 	<br><br>
-	<label for="whereEating"><input type="radio" value="Eat In" checked>Eat In</label>
-	<label for="whereEating"><input type="radio" value="Carry Out">Carry Out</label>
-	<label for="whereEating"><input type="radio" value="Delivery">Delivery</label>
-	<br><br>
-	<select>
+	<div class="form-group">
+		Food Type<br>
+		<select>
 		<option id="foodType" value="pizza">Pizza</option>
 		<option id="foodType" value="pasta">Pasta</option>
 		<option id="foodType" value="korean">Korean</option>
-	</select>
+		</select>
+	</div>
 	</form>
 </body>
 
