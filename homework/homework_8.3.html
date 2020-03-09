@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Window resize example</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      div {
+        box-sizing: border-box;
+		width: 100px;
+        height: 100px;
+        background-image: url(bgtile.png);
+        border: 10px solid white;
+      }
+    </style>
+  </head>
+  <body>
+	<h1> My Shopping List</h1>
+    <div>
+		<label for = "item">Enter a new item:</label>
+		<input type = "text" name= "item" id="item">
+		<button>Add Item</button>
+
+    </div>
+
+    <script>
+		let ulist = document.querySelector("ul");
+		let input = document.querySelector("input");
+		let button = document.querySelector("button");
+		
+		let onclick = () => {
+			let current = input.value;
+			input.value = '';
+			
+			let currList = document.createElement("li");
+			let currSpan = document.createElement("span");
+			let currButton = document.createElement("button");
+			
+			currList.appendChild(currSpan);
+			currSpan.textContent = current;
+			currList.appendChild(currButton);
+			currButton.textContent = 'Delete';
+			
+			ulist.appendChild(currList);
+			
+			currButton.addEventListener("click", function(e) {
+				ulist.removeChild(currButton);
+			});
+			
+			input.focus();
+		}
+
+    </script>
+  </body>
+</html>
