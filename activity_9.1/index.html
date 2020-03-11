@@ -5,6 +5,11 @@
     <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+	  
+	<style>
+		body{margin: 0}
+		main{margin-left: 8px}
+	  </style>
   </head>
 	
   <body>
@@ -21,19 +26,18 @@
       <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Bookmark this page">bookmark</button>
     </section>
   </div>
-	
-<!-- 	<div class = "mdc-top-app-bar--fixed-adjust"> -->
-  <button class="foo-button mdc-button mdc-button--raised">
-    <div class="mdc-button__ripple"></div>
-    <span class="mdc-button__label">Button</span>
-  </button>
-<!-- 	  </div> -->
-	
 </header>
 	  
+	  <main class = "mdc-top-app-bar--fixed-adjust">
+	  <button class="mdc-button foo-button mdc-button--raised">
+		<div class="mdc-button__ripple"></div>
+		<span class="mdc-button__label">Button</span>
+	  </button>
+	  </main>
 	  
 	  <script>
-		  mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));  
+		  mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
+		  mdc.topAppBar.ripple.MDCRipple.attachTo(document.querySelector('header.mdc-top-app-bar')); 
 	  </script>
 </body>
 
